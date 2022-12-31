@@ -1,4 +1,4 @@
-# Lowkey Hugo Themes
+# Lowkey Hugo Theme
 
 ![Lowkey Hugo Themes](https://raw.githubusercontent.com/nixentric/Lowkey-Hugo-Themes/main/cover.png)
 
