@@ -6,7 +6,7 @@
 
 ## Demo
 
-[Click Here](#)
+[Click Here](https://lowkey-hugo.netlify.app/)
 
 ## Installation
 
