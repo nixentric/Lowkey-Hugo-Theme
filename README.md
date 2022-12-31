@@ -7,3 +7,13 @@
 ## Demo
 
 [Click Here](#)
+
+## Installation
+
+- Click the "Clone or download" button and copy the URL of the repository.
+- Open a terminal window and navigate to the root directory of your Hugo site. Then, run the following command to add the theme as a submodule to your site's git repository:
+```
+git submodule add [<theme-repository-url>](https://github.com/nixentric/Lowkey-Hugo-Theme.git) themes/lowkey
+```
+- Delete `config.toml`
+- Copy all of the ExampleSite's files and directories into the root directory of your Hugo site, overwriting any existing files with the same names.
