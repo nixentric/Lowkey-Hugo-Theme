@@ -1,0 +1,38 @@
+
+
+
+
+{{/*  {{ $img := .Page.Resources.GetMatch (printf "*%s*" (.Get 0 | safeURL)) }}
+{{ $command := .Get 1 }}
+{{ $options := .Get 2 }}
+{{ $alt := .Get 3 }}
+{{ if eq $command "Fit"}}
+  {{ $img = $img.Fit $options }}
+{{ else if eq $command "Resize"}}
+  {{ $img = $img.Resize $options }}
+{{ else if eq $command "Fill"}}
+  {{ $img = $img.Fill $options }}
+{{ else if eq $command "Crop"}}
+  {{ $img = $img.Crop $options }}
+{{ else }}
+  {{ errorf "Invalid image processing command: Must be one of Crop, Fit, Fill or Resize."}}
+{{ end }}
+
+
+
+<figure>
+  <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $alt }}" >
+
+
+
+  <figcaption>
+  <small>
+    {{ with .Inner }}
+      {{ . }}
+    {{ else }}
+      .{{ $command }} "{{ $options }}"
+    {{ end }}
+  </small>
+  </figcaption>
+
+</figure>  */}}

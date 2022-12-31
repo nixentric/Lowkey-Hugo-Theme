@@ -1,0 +1,10 @@
+<nav>
+    <ul class="flex uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        {{ $currentPage := . }}
+        {{ range site.Menus.main }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+        {{- $page_url:= $currentPage.Permalink | absLangURL }}
+        <li class="{{- if eq $menu_item_url $page_url }}text-gray-900{{else}}hover:text-gray-500{{ end -}}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+</nav>

@@ -1,0 +1,11 @@
+baseURL = 'http://example.org/'
+copyright = "{year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
+languageCode = 'en-us'
+theme = 'lowkey'
+title = 'Lowkey Hugo'
+enableRobotsTXT = true
+
+
+# List Config
+summaryLength= 15
+paginate = 5 

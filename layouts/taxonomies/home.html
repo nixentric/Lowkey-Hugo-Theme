@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ $pages := .Pages }}
+<div class="flex flex-col gap-1">
+<h1 class="text-2xl font-extrabold">{{ if .Params.header }}{{ .Params.header }}{{ else }}{{ .Title }}{{ end }}</h1>
+{{ if .Content }}<p class="content text-lg text-gray-900">{{ .Content }}</p>{{ end }}
+</div>
+
+<section class="py-10 flex flex-col gap-10 ">
+<ul class=" inline-flex gap-2 ">
+    {{ range $index, $pages}}
+    {{ partial "list/categories" . }}
+    {{ end }}
+</ul>
+</section>
+
+
+{{ end }}

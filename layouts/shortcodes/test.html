@@ -1,0 +1,23 @@
+{{/*  Image Resources  */}}
+{{ $img := .Page.Resources.GetMatch (printf "%s" (.Get "src" | safeURL ))}}
+{{ $alt := .Get "alt"}}
+
+{{/*  Image Processing  */}}
+{{ $command := .Get "size-method" }}
+{{ $options := .Get "size-format" }}
+{{ if eq $command "Fit"}}
+  {{ $img = $img.Fit $options }}
+{{ else if eq $command "Resize"}}
+  {{ $img = $img.Resize $options }}
+{{ else if eq $command "Fill"}}
+  {{ $img = $img.Fill $options }}
+{{ else if eq $command "Crop"}}
+  {{ $img = $img.Crop $options }}
+{{ end }}
+
+{{/*  Position  */}}
+{{ $position := .Get "position" }}
+
+<figure class='mb-5{{ if eq $position "center" }} flex justify-center{{ end }}'>
+    <img src="{{ $img.RelPermalink }}" {{ with $alt }}alt="{{ . }}"{{end}} width="{{ $img.Width }}" height="{{ $img.Height }}" >
+</figure>

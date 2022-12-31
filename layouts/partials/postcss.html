@@ -1,0 +1,7 @@
+{{- $styles := resources.Get . | postCSS (dict "config" "./assets/config/postcss.config.js") -}}
+{{- if eq hugo.Environment "development" -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ else -}}
+{{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end -}}

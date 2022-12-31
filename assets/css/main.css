@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* inter-100 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100;
+    src: local(''),
+         url('../fonts/inter-v12-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-200 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 200;
+    src: local(''),
+         url('../fonts/inter-v12-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-300 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: local(''),
+         url('../fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-regular - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-500 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-600 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/inter-v12-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-800 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: local(''),
+         url('../fonts/inter-v12-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-900 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+    src: local(''),
+         url('../fonts/inter-v12-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v12-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+}
+
+@layer utilities {
+    .content a {
+        @apply font-bold underline;
+    }
+
+    .content p, .content hr, .content pre, .content dl {
+      @apply mb-5;
+    }
+
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+      @apply font-bold text-gray-900 mb-5 pt-2;
+    }
+
+    .content h1 {
+      @apply text-4xl leading-10;
+    }
+
+    .content h2 {
+      @apply text-3xl leading-10;
+    }
+
+    .content h3 {
+      @apply text-2xl;
+    }
+
+    .content h4 {
+      @apply text-xl;
+    }
+
+    .content h5 {
+      @apply text-lg;
+    }
+
+    .content h6 {
+      @apply text-base;
+    }
+
+    .content blockquote {
+      @apply text-xl text-gray-500 px-10 pt-10 pb-5 mt-7 mb-5 rounded-lg border
+    }
+
+    .content ol, .content ul {
+      @apply list-inside grid gap-2 mb-5
+    }
+
+    .content ol {
+      @apply list-decimal
+    }
+
+    .content ul {
+      @apply list-disc
+    }
+    
+    .content code {
+      @apply px-2 py-1 bg-gray-100 border rounded-lg;
+    }
+
+    .content table {
+      @apply w-full border rounded-lg border-separate border-spacing-0 mb-5;
+    }
+
+    .content thead th {
+      @apply border-b-2 border-r last:border-r-0 py-2 px-3;
+    }
+
+    .content tbody td {
+      @apply py-2 px-3 border-b text-base border-r last:border-r-0;
+    }
+
+    .content tbody tr:last-child td {
+      @apply border-b-0
+    }
+
+    .content pre {
+      @apply rounded-lg border p-5
+    }
+
+    .content pre code {
+      @apply bg-transparent border-0
+    }
+
+    .content .footnotes {
+      @apply text-sm
+    }
+    .content .footnotes p {
+      @apply inline-block mb-0
+    }
+
+    .content dt {
+      @apply font-bold italic
+    }
+
+    .content dd {
+      @apply pl-10
+    }
+
+    span.begin-task-list + ul {
+      list-style: none;
+  }
+}
