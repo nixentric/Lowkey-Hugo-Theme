@@ -137,7 +137,7 @@
     }
 
     .content ol, .content ul {
-      @apply list-inside grid gap-2 mb-5
+      @apply grid gap-2 mb-5 ml-6;
     }
 
     .content ol {
