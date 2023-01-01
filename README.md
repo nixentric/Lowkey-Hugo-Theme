@@ -22,4 +22,4 @@ git submodule add [<theme-repository-url>](https://github.com/nixentric/Lowkey-H
 - TailwindCSS with PostCSS (Hugo Pipes)
 
 ## Spesification
-- HUGO_VERSION 0.109.0 (Tested)
+- HUGO_VERSION 0.109.0 (Tested on Netlify)
