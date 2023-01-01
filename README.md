@@ -17,3 +17,9 @@ git submodule add [<theme-repository-url>](https://github.com/nixentric/Lowkey-H
 ```
 - Delete `config.toml`
 - Copy all of the ExampleSite's files and directories into the root directory of your Hugo site, overwriting any existing files with the same names.
+
+## Technology
+- TailwindCSS with PostCSS (Hugo Pipes)
+
+## Spesification
+- HUGO_VERSION 0.109.0 (Tested)
