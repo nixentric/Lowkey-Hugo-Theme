@@ -3,12 +3,17 @@
 
 name = "Lowkey"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://github.com/nixentric/lowkey"
-tags = []
-features = []
-min_version = "0.41.0"
+licenselink = "https://github.com/nixentric/Lowkey-Hugo-Theme/blob/main/LICENSE"
+description = "Lowkey Hugo theme is a simple and modern theme that is inspired by Adam Wathan's Blog."
+homepage = "https://github.com/nixentric/Lowkey-Hugo-Theme"
+tags = ["simple", "minimal", "responsive", "blog", "personal", "light"]
+features = [
+  "responsive",
+  "single-column",
+  "blog",
+  "tailwindcss",
+]
+min_version = "0.109.0"
 
 [author]
   name = "Nixentric"
