@@ -1,12 +1,15 @@
 {{ define "main" }}
-    <article class="flex flex-col gap-3">
-    <header>
-        <h2 class="text-2xl font-extrabold text-gray-900">{{ .Title }}</h2>
-    </header>
-    <section class="content text-lg text-gray-800">
-    {{ .Content }}
-    </section>
-    </article>
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $paginator := .Paginate $pages  }}
+<div class="flex flex-col gap-1">
+<h3 class="text-2xl font-extrabold">Latest Post</h3>
+</div>
+<section class="py-10 flex flex-col gap-10 ">
+{{ range $index, $pages := $paginator.Pages }}
+    {{ partial "list/default" . }}
+{{ end }}
+</section>
 
-    
+{{ partial "list/components/pagination" . }}
+
 {{ end }}

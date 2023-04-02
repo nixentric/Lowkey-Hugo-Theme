@@ -140,6 +140,14 @@
       @apply grid gap-2 mb-5 ml-6;
     }
 
+    .content .footnotes ol {
+      @apply block
+    }
+
+    .content .footnotes li {
+      @apply mb-3
+    }
+
     .content ol {
       @apply list-decimal
     }
@@ -150,6 +158,10 @@
     
     .content code {
       @apply px-2 py-1 bg-gray-100 border rounded-lg;
+    }
+
+    .content code.language-text, .highlight code {
+      @apply px-0
     }
 
     .content table {
@@ -169,7 +181,7 @@
     }
 
     .content pre {
-      @apply rounded-lg border p-5
+      @apply rounded-lg border p-5 overflow-auto
     }
 
     .content pre code {
@@ -186,6 +198,8 @@
     .content dt {
       @apply font-bold italic
     }
+
+    
 
     .content dd {
       @apply pl-10

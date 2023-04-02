@@ -1,5 +1,5 @@
 <nav>
-    <ul class="flex uppercase text-xs font-semibold gap-7 text-gray-500 ">
+    <ul class="flex flex-wrap justify-center uppercase text-xs font-semibold gap-7 text-gray-500 ">
         {{ $currentPage := . }}
         {{ range site.Menus.main }}
         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
