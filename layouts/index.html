@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{ if site.Params.isSinglePage }}
+{{ partial "single/homepage" . }}
+{{ else }}
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ $paginator := .Paginate $pages  }}
 <div class="flex flex-col gap-1">
@@ -9,7 +12,6 @@
     {{ partial "list/default" . }}
 {{ end }}
 </section>
-
 {{ partial "list/components/pagination" . }}
-
+{{ end }}
 {{ end }}

@@ -1,3 +1,6 @@
+# Homepage Config
+isSinglePage = true
+
 # Meta Config
 description = "Hello"
 
