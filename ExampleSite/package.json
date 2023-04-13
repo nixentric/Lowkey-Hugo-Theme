@@ -1,6 +1,6 @@
 {
   "name": "lowkey",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Clean and Simple Hugo theme inspired by Adam Wathan's (https://adamwathan.me/) Website.",
   "main": "index.js",
   "scripts": {
