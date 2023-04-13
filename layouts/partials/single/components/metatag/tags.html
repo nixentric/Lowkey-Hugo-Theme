@@ -1,0 +1,9 @@
+{{ with (.GetTerms "tags") }}
+        <div class="pb-14 inline-flex gap-2 text-gray-600 text-sm font-medium">
+            {{ range . }}
+                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="{{ .RelPermalink }}" alt="{{ .LinkTitle }}" >
+                        {{ .LinkTitle }}
+                    </a>
+            {{ end }}
+        </div>
+{{ end }}
