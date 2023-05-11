@@ -9,6 +9,7 @@
     <section class="content text-lg text-gray-800">
     {{ .Content | emojify }}
     </section>
+    {{ partial "single/components/comments/comments" . }}
     <footer>
         {{ partial "single/components/metatag/tags" . }}
     </footer>
