@@ -207,5 +207,11 @@
 
     span.begin-task-list + ul {
       list-style: none;
-  }
+    }
+    .taxonomy-list {
+      @apply flex flex-row flex-wrap gap-x-2 gap-y-6;
+    }
+    .tags-list {
+      @apply gap-y-2;
+    }
 }
