@@ -26,4 +26,4 @@ npm install
 - TailwindCSS with PostCSS (Hugo Pipes)
 
 ## Spesification
-- HUGO_VERSION 0.109.0 (Tested on Netlify)
+- HUGO_VERSION 0.110.0
