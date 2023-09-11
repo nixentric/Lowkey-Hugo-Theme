@@ -13,7 +13,7 @@ features = [
   "blog",
   "tailwindcss",
 ]
-min_version = "0.109.0"
+min_version = "0.110.0"
 
 [author]
   name = "Nixentric"
