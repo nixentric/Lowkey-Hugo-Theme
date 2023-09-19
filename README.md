@@ -10,8 +10,7 @@
 
 ## Installation
 
-- Click the "Clone or download" button and copy the URL of the repository.
-- Open a terminal window and navigate to the root directory of your Hugo site. Then, run the following command to add the theme as a submodule to your site's git repository:
+- Open a Terminal and navigate to the root directory of your Hugo site. Then, run the following command to add the theme as a submodule to your site's git repository:
 ```
 git clone https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/lowkey
 ```
