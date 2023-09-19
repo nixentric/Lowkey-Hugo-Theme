@@ -1,0 +1,13 @@
+{{/*  Resources  */}}
+{{- $tailwind := resources.Get "css/tailwind.css"  | postCSS (dict "config" "./config/postcss.config.js") -}}
+
+{{/*  Processor  */}}
+{{- $styles := slice $tailwind | resources.Concat "css/app.css" -}}
+
+{{/* Output */}}
+{{- if eq hugo.Environment "development" -}}
+<link rel="stylesheet" href="{{ $styles.Permalink | absURL }}">
+{{- else -}}
+{{- $styles := $styles | minify | fingerprint | resources.PostProcess -}}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" >
+{{- end -}}
