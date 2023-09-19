@@ -6,7 +6,7 @@
     <div>
         {{ if $paginator.HasPrev }}
         <a href="{{ $paginator.Prev.URL }}" class="inline-flex items-center gap-2">
-            <span class="h-4 w-4 stroke-2"> {{ partial "processor/svg" "arrow-left" }} </span>
+            <span class="h-4 w-4 stroke-2"> {{ partial "handler/svg" "arrow-left" }} </span>
             Newer Posts
         </a>
         {{ end }}
@@ -17,7 +17,7 @@
         {{ if $paginator.HasNext }}
         <a href="{{ $paginator.Next.URL }}" class="inline-flex items-center gap-2">
             Older Posts
-            <span class="h-4 w-4 stroke-2"> {{ partial "processor/svg" "arrow-right" }} </span>
+            <span class="h-4 w-4 stroke-2"> {{ partial "handler/svg" "arrow-right" }} </span>
         </a>
         {{ end }}
     </div>
