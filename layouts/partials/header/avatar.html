@@ -1,5 +1,5 @@
 {{ $avatar := resources.GetMatch .Site.Params.avatar }}
-{{ $tiny := ($avatar.Fill "80x80 q90") }}
+{{ $tiny := ($avatar.Fill "200x200 q90") }}
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
     <a href="{{ .Site.BaseURL }}">
         <img srcset="{{- with $tiny.RelPermalink -}}{{.}} 80w{{- end -}}" src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="{{ .Site.Title }}">
