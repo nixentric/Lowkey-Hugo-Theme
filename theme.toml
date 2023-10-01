@@ -6,6 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/nixentric/Lowkey-Hugo-Theme/blob/main/LICENSE"
 description = "Lowkey Hugo theme is a simple and modern theme that is inspired by Adam Wathan's Blog."
 homepage = "https://github.com/nixentric/Lowkey-Hugo-Theme"
+demosite = "https://lowkey-hugo.netlify.app"
 tags = ["simple", "minimal", "responsive", "blog", "personal", "light"]
 features = [
   "responsive",
