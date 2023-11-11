@@ -12,9 +12,7 @@ const cssnanoPlugin = require('cssnano')({
 module.exports = {
     plugins: [
         require('tailwindcss')(themeDir + './config/tailwind.config.js'),
-        require('autoprefixer')({
-            path: [themeDir]
-        }),
+        require('autoprefixer')({ path: [themeDir] }),
         ...process.env.HUGO_ENVIRONMENT === 'production' ? [cssnanoPlugin] : []
     ]
 }

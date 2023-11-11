@@ -13,7 +13,7 @@ disqusShortname = ""
 [emoji]
 enableEmoji = true
 
- # giscus is a comment system based on GitHub Discussions. see https://giscus.app
+# giscus is a comment system based on GitHub Discussions. see https://giscus.app
 [giscus]       
     enable = false
     repo = ""

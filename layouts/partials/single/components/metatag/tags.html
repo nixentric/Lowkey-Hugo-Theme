@@ -1,9 +1,0 @@
-{{ with (.GetTerms "tags") }}
-        <div class="pb-14 taxonomy-list tags-list text-gray-600 text-sm font-medium">
-            {{ range . }}
-                    <a class="bg-gray-100 py-2 px-3 rounded-lg" href="{{ .RelPermalink }}" alt="{{ .LinkTitle }}" >
-                        {{ .LinkTitle }}
-                    </a>
-            {{ end }}
-        </div>
-{{ end }}
