@@ -1,12 +1,12 @@
 {{/* Resources */}} 
-{{- $tailwind := resources.Get "css/tailwind.css" | postCSS (dict "config" "./config/postcss.config.js") -}}
+{{- $tailwind := resources.Get "css/tailwind.css" | toCSS | postCSS (dict "config" "./config/postcss.config.js") -}}
 
 {{/* MathJax */}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
 
 {{/* Processor */}} 
-{{- $styles := $tailwind -}} 
+{{- $styles := slice $tailwind | resources.Concat "css/app.css" -}} 
 
 {{/* Output */}} 
 {{- if eq hugo.Environment "development" -}}
