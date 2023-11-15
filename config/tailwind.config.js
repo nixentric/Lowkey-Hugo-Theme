@@ -3,12 +3,12 @@ module.exports = {
   important: true,
   darkMode: 'class',
   content: [
-    "./themes/**/layouts/**/*.html",
-    "./content/**/layouts/**/*.html",
-    "./layouts/**/*.html",
-    "./content/**/*.html",
-    "./content/**/*.md",
-    "./public/**/*.html",
+    "./src/themes/**/layouts/**/*.html",
+    "./src/content/**/layouts/**/*.html",
+    "./src/layouts/**/*.html",
+    "./src/content/**/*.html",
+    "./src/content/**/*.md",
+    "./src/public/**/*.html",
   ],
   theme: {
     extend: {
