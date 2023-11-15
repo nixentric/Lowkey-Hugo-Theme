@@ -6,7 +6,8 @@ module.exports = {
       "./content/**/layouts/**/*.html",
       "./layouts/**/*.html",
       "./content/**/*.html",
-      "./content/**/*.md"
+      "./content/**/*.md",
+      "./public/**/*.html",
     ],
     theme: {
       extend: {
