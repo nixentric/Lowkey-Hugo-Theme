@@ -1,5 +1,5 @@
 {{/* Resources */}} 
-{{- $tailwind := resources.Get "css/tailwind.css" | toCSS | postCSS (dict "config" "./config/postcss.config.js") -}}
+{{- $tailwind := resources.Get "css/tailwind.css" | postCSS (dict "config" "./config/postcss.config.js") -}}
 
 {{/* MathJax */}}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

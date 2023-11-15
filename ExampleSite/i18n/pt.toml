@@ -3,3 +3,9 @@
     
 [readMore]
     other = 'Ler mais'
+
+[404_title]
+    other = 'Página não encontrada'
+
+[404_text]
+    other = 'Parece que você seguiu um link quebrado ou inseriu um URL que não existe neste site.'
