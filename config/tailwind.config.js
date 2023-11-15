@@ -1,5 +1,7 @@
+import path from 'path';
+
 // When deploying to production, set the base directory to your Hugo project's root directory.
-const baseDir = process.env.HUGO_ENVIROMENT === "production" ? './src' : '.';
+const baseDir = path.join(__dirname, '..');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
