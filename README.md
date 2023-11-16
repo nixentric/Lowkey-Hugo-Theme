@@ -13,6 +13,7 @@ Special Metion:
 
 
 And also to the other contributors 💌:
+
 <a href="https://github.com/nixentric/Lowkey-Hugo-Theme/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nixentric/Lowkey-Hugo-Theme" />
 </a>
