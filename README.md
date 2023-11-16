@@ -21,7 +21,7 @@
 git init
 git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/lowkey
 ```
-- Delete `config.toml`
+- Delete `config.toml` / `hugo.toml`
 - Copy all of the ExampleSite's files and directories into the root directory of your Hugo site, overwriting any existing files with the same names.
 - Install packages
 ```
