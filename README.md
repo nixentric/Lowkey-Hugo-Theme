@@ -4,7 +4,7 @@
 
 **Lowkey Hugo theme** is a simple and modern theme that is inspired by [Adam Wathan's Blog](https://adamwathan.me/). It is built using Tailwind CSS, which allows for easy customization. The theme features a minimalistic and streamlined layout, with a focus on readability and ease of use. With its lightweight code and fast loading times, Lowkey Hugo theme is a great choice for those looking to create a personal blog and user-friendly blog.
 
-## Special Contributor
+## Special Contributors
 <a href="https://github.com/nixentric/Lowkey-Hugo-Theme/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nixentric/Lowkey-Hugo-Theme" />
 </a>
