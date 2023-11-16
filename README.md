@@ -9,7 +9,7 @@
 First, I am very grateful to the first Contributor who has made a significant contribution to this project.
 
 Special Metion:
-🥇 [@diegopaiva1](https://github.com/diegopaiva1) - [entusiasta.dev](https://entusiasta.dev)
+- 🥇 [@diegopaiva1](https://github.com/diegopaiva1) - [entusiasta.dev](https://entusiasta.dev)
 
 
 And also to the other contributors 💌:
