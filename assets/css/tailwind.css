@@ -13,6 +13,7 @@
          url('../fonts/inter-v12-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-200 - latin */
   @font-face {
     font-family: 'Inter';
@@ -23,6 +24,7 @@
          url('../fonts/inter-v12-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-300 - latin */
   @font-face {
     font-family: 'Inter';
@@ -33,6 +35,7 @@
          url('../fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-regular - latin */
   @font-face {
     font-family: 'Inter';
@@ -43,6 +46,7 @@
          url('../fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+  
   /* inter-500 - latin */
   @font-face {
     font-family: 'Inter';
@@ -53,6 +57,7 @@
          url('../fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-600 - latin */
   @font-face {
     font-family: 'Inter';
@@ -63,6 +68,7 @@
          url('../fonts/inter-v12-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-700 - latin */
   @font-face {
     font-family: 'Inter';
@@ -73,6 +79,7 @@
          url('../fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-800 - latin */
   @font-face {
     font-family: 'Inter';
@@ -83,6 +90,7 @@
          url('../fonts/inter-v12-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
   /* inter-900 - latin */
   @font-face {
     font-family: 'Inter';
@@ -93,125 +101,272 @@
          url('../fonts/inter-v12-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/inter-v12-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-lg text-justify;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900 dark:text-gray-300 mb-5 pt-2;
+  }
+  
+  h1 {
+    @apply text-4xl leading-10;
+  }
+  
+  h2 {
+    @apply text-3xl leading-10;
+  }
+  
+  h3 {
+    @apply text-2xl;
+  }
+  
+  h4 {
+    @apply text-xl;
+  }
+  
+  h5 {
+    @apply text-lg;
+  }
+  
+  h6 {
+    @apply text-base;
+  }
+  
+  hr {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  p, hr, pre, dl {
+    @apply mb-5 text-justify;
+  }
+  
+  article > h1 {
+    @apply mb-1;
+  }
+  
+  code {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-lg text-sm border dark:border-gray-700 px-2 py-1;
+  }
+  
+  pre {
+    @apply rounded-lg border dark:border-gray-700 p-5 overflow-auto text-base;
+  }
+  
+  pre code {
+    @apply bg-transparent border-0 px-0;
+  }
+  
+  figure {
+    @apply mb-5;
+  }
+  
+  figcaption {
+    @apply text-base text-gray-500 dark:text-gray-400 mt-2;
+  }
+  
+  blockquote {
+    @apply text-xl text-gray-500 dark:text-gray-400 italic border-l-4 border-gray-300 dark:border-gray-700 pl-4 mb-5;
+  }
+  
+  ul, ol {
+    @apply mb-5 ml-6;
+  }
+  
+  ol {
+    @apply list-decimal;
+  }
+  
+  ul {
+    @apply list-disc;
+  }
+  
+  nav ul, footer ul {
+    @apply list-none ml-0;
+  }
+  
+  header h1 {
+    @apply mb-0;
+  }
+  
+  table {
+    @apply w-full border rounded-md border-separate border-spacing-0 mb-5;
+  }
+  
+  thead th {
+    @apply border-b-2 border-r last:border-r-0 py-2 px-3;
+  }
+  
+  tbody td {
+    @apply py-2 px-3 border-b text-base border-r last:border-r-0;
+  }
+  
+  tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  
+  dt {
+    @apply font-bold italic;
+  }
+  
+  dd {
+    @apply pl-10;
+  }
+  
+  header nav > ul {
+    @apply flex flex-wrap justify-center uppercase text-xs font-semibold gap-7;
+  }
+  
+  nav a, footer a {
+    @apply text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold;
+  }
+
+  footer {
+    @apply text-xs;
+  }
 }
 
-@layer utilities {
-    .content a {
-        @apply font-bold underline;
-    }
+@layer utilities {  
+  nav a.active {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+  
+  /* Content overrides */
+  #content {
+    @apply leading-normal;
+  }
 
-    .content p, .content hr, .content pre, .content dl {
-      @apply mb-5;
-    }
+  #content a {
+    @apply underline font-bold text-emerald-700 hover:text-emerald-600 dark:text-emerald-300 dark:hover:text-emerald-200;
+  }
+  
+  #content .date {
+    @apply py-2 text-sm font-semibold text-gray-400;
+  }
+  
+  #content h1 > a {
+    @apply no-underline text-xl font-bold hover:underline text-gray-900 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100;
+  }
+  
+  #content .meta {
+    @apply text-sm font-semibold text-gray-500 dark:text-gray-400 flex gap-3 mt-2
+  }
+  
+  #content .meta a {
+    @apply no-underline;
+  }
+  
+  #content .description {
+    @apply text-gray-600 dark:text-gray-300 text-base;
+  }
+  
+  #content .read-more {
+    @apply no-underline inline-flex gap-2 text-sm font-semibold items-center text-emerald-700 hover:text-emerald-600 dark:text-emerald-300 dark:hover:text-emerald-200;  
+  }
+  
+  #content .footnotes {
+    @apply text-sm;
+  }
+  
+  #content .footnotes p {
+    @apply inline-block mb-0;
+  }
+  
+  #content .footnotes ol {
+    @apply block;
+  }
+  
+  #content .footnotes li {
+    @apply mb-3;
+  }
+  
+  #content .alert-box {
+    @apply px-4 pt-4 pb-1 mb-5 border-t-4;
+  }
+  
+  #content .alert-box .alert-title {
+    @apply text-inherit font-semibold text-lg py-0 px-0 mb-2;
+  }
 
-    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-      @apply font-bold text-gray-900 mb-5 pt-2;
-    }
+  #content .alert-box a {
+    @apply text-inherit hover:text-inherit;
+  }
 
-    .content h1 {
-      @apply text-4xl leading-10;
-    }
+  #content .alert-box .alert-icon {
+    @apply w-7 h-7 mr-2;
+  }
 
-    .content h2 {
-      @apply text-3xl leading-10;
-    }
+  #content .alert-box.warning {
+    @apply bg-yellow-100 border-yellow-500 text-yellow-900;
+  }
+  
+  #content .alert-box.info {
+    @apply bg-blue-100 border-blue-500 text-blue-900;
+  }
 
-    .content h3 {
-      @apply text-2xl;
-    }
+  #content .alert-box.success {
+    @apply bg-green-100 border-green-500 text-green-900;
+  }
 
-    .content h4 {
-      @apply text-xl;
-    }
+  #content .alert-box.error {
+    @apply bg-red-100 border-red-500 text-red-900;
+  }
 
-    .content h5 {
-      @apply text-lg;
-    }
+  #content .table-of-contents {
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 p-4 border dark:border-gray-700 rounded-lg;
+  }
 
-    .content h6 {
-      @apply text-base;
-    }
+  #content .table-of-contents #TableOfContents ul {
+    @apply list-decimal list-inside ml-4;
+  }
 
-    .content blockquote {
-      @apply text-xl text-gray-500 px-10 pt-10 pb-5 mt-7 mb-5 rounded-lg border
-    }
+  #content .table-of-contents #TableOfContents ul li {
+    @apply my-2 text-base;
+  }
 
-    .content ol, .content ul {
-      @apply grid gap-2 mb-5 ml-6;
-    }
+  #content .table-of-contents #TableOfContents ul li a {
+    @apply font-normal no-underline text-gray-700 dark:text-gray-300 hover:underline hover:text-emerald-600 dark:hover:text-emerald-200;
+  }
 
-    .content .footnotes ol {
-      @apply block
-    }
+  #content .pagination-button {
+    @apply no-underline inline-flex items-center gap-2 px-3 py-2 border border-gray-300 dark:border-gray-700 text-sm rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100;
+  }
 
-    .content .footnotes li {
-      @apply mb-3
-    }
+  #content .taxonomy-list {
+    @apply flex flex-row flex-wrap gap-x-2 gap-y-6 list-none ml-0;
+  }
 
-    .content ol {
-      @apply list-decimal
-    }
+  #content .taxonomy-list a {
+    @apply font-normal no-underline text-base text-gray-800 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 py-2 px-3 rounded-lg;
+  }
 
-    .content ul {
-      @apply list-disc
-    }
-    
-    .content code {
-      @apply px-2 py-1 bg-gray-100 border rounded-lg;
-    }
+  #content .tags-list {
+    @apply gap-y-2;
+  }
 
-    .content code.language-text, .highlight code {
-      @apply px-0
-    }
+  #content span.task-list + ul {
+    @apply list-none;
+  }
 
-    .content table {
-      @apply w-full border rounded-lg border-separate border-spacing-0 mb-5;
-    }
+  /* Misc */
+  #site-title {
+    @apply text-center sm:text-left text-4xl font-extrabold text-gray-800 dark:text-gray-100;
+  }
 
-    .content thead th {
-      @apply border-b-2 border-r last:border-r-0 py-2 px-3;
-    }
+  .header {
+    @apply flex flex-row items-center justify-between;
+  }
 
-    .content tbody td {
-      @apply py-2 px-3 border-b text-base border-r last:border-r-0;
-    }
+  .header .toggle-theme {
+    @apply w-6 h-6;
+  }
 
-    .content tbody tr:last-child td {
-      @apply border-b-0
-    }
+  .title-large {
+    @apply text-4xl leading-snug font-bold text-gray-900 dark:text-gray-300;
+  }
 
-    .content pre {
-      @apply rounded-lg border p-5 overflow-auto
-    }
-
-    .content pre code {
-      @apply bg-transparent border-0
-    }
-
-    .content .footnotes {
-      @apply text-sm
-    }
-    .content .footnotes p {
-      @apply inline-block mb-0
-    }
-
-    .content dt {
-      @apply font-bold italic
-    }
-
-    
-
-    .content dd {
-      @apply pl-10
-    }
-
-    span.begin-task-list + ul {
-      list-style: none;
-    }
-    .taxonomy-list {
-      @apply flex flex-row flex-wrap gap-x-2 gap-y-6;
-    }
-    .tags-list {
-      @apply gap-y-2;
-    }
+  .title-small {
+    @apply text-2xl font-extrabold text-gray-900 dark:text-gray-300;
+  }
 }

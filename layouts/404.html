@@ -1,12 +1,13 @@
 {{ define "main" }}
 
 <article class="flex flex-col gap-3">
-    <header>
-        <h2 class="text-2xl font-extrabold text-gray-900">{{ .Title }}</h2>
-    </header>
-    <section class="content text-lg text-gray-800">
-        Looks like you've followed a broken link or entered a URL that doesn't exist on this site.
-    </section>
+  <header>
+    <h2 class="title-small">{{ i18n "404_title" }}</h2>
+  </header>
+
+  <section>
+    <p>{{ i18n "404_text" }}</p>
+  </section>
 </article>
-    
+
 {{ end }}

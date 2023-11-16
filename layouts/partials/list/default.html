@@ -1,11 +1,28 @@
 <article class="flex flex-col gap-1">
-    <h1 class="text-xl font-bold hover:underline"> <a href=" {{ .Permalink }} ">{{ .Title }}</a></h1>
-    <div class="text-gray-600">
+  <h1>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="{{ .PublishDate }}" title='{{ .PublishDate.Format "Mon, Jan 2, 2006, 3:04 PM MST" }}'>
+      {{ .PublishDate.Format "02/01/2006" }}
+    </time>
+  </span>
+
+  <div class="description">
     {{ if .Params.description }}
-    {{ .Params.description }}    
-    {{ else if .Summary  }}
-    {{ .Summary }}
+      {{ .Params.description }}
+    {{ else if .Summary }}
+      {{ .Summary }}
     {{ end }}
-    </div>
-    <div class="mt-2"><a class="inline-flex  gap-2 text-sm font-semibold items-center text-emerald-700 hover:text-emerald-600" href="{{ .Permalink }}">Read This Article <span class="w-4 h-4 stroke-2">{{ partial "handler/svg" "arrow-right" }}</span> </a> </div>
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="{{ .Permalink }}">
+      {{ i18n "readMore" }}
+      <span class="w-4 h-4 stroke-2">
+        {{ partial "utils/icon" "arrow-right" }}
+      </span>
+    </a>
+  </div>
 </article>

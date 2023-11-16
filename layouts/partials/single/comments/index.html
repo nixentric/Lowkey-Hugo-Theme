@@ -1,0 +1,11 @@
+{{ if .IsPage }}
+    <!-- giscus -->
+  {{ if .Site.Params.giscus.enable }}
+    {{ partial "single/comments/giscus" . }}
+  {{ end }}
+
+    <!-- disqus -->
+  {{ if .Site.Params.disqusShortname }}
+    {{ partial "single/comments/disqus" . }}
+  {{ end }}
+{{ end }}
