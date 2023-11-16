@@ -12,7 +12,7 @@
 
 ## Demo
 
-[Click Here](https://lowkey-hugo.netlify.app)
+[Click Here](https://lowkey-demo.pages.dev)
 
 ## Installation
 
