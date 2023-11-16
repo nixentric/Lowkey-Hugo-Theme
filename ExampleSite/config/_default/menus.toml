@@ -22,6 +22,12 @@
     url = "/tags"
     weight = 4
 
+[[main]]
+    identifier = "donate"
+    name = "Donate"
+    url = "https://ko-fi.com/nixentric"
+    weight = 5
+    
 # Social Media Configuration
 
 [[social]]
