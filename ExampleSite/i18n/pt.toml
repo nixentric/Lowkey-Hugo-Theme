@@ -4,6 +4,9 @@
 [readMore]
     other = 'Ler mais'
 
+[summary]
+    other = 'Sumário'
+
 [estimatedReadingTime]
     other = 'Tempo estimado de leitura: %d minutos'
 
