@@ -7,6 +7,9 @@
 [summary]
     other = 'Sumário'
 
+[estimatedReadingTime]
+    other = 'Tempo estimado de leitura: %d minutos'
+
 [404_title]
     other = 'Página não encontrada'
 
