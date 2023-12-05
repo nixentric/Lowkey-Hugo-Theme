@@ -4,6 +4,9 @@
 [readMore]
     other = 'Ler mais'
 
+[summary]
+    other = 'Sumário'
+
 [404_title]
     other = 'Página não encontrada'
 
