@@ -4,6 +4,9 @@
 [readMore]
     other = 'Read more'
 
+[estimatedReadingTime]
+    other = 'Estimated reading time: %d minutes'
+
 [404_title]
     other = 'Page not found'
 
