@@ -28,7 +28,7 @@ And also to the other contributors 💌:
 - Open a Terminal and navigate to the root directory of your Hugo site. Then, run the following command to add the theme as a submodule to your site's git repository:
 ```
 git init
-git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/lowkey
+git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/enchanted-lowkey
 ```
 - Delete `config.toml` / `hugo.toml`
 - Copy all of the ExampleSite's files and directories into the root directory of your Hugo site, overwriting any existing files with the same names.
