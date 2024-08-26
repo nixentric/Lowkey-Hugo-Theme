@@ -1,17 +1,9 @@
-{{ define "main" }}
-{{ if site.Params.isSinglePage }}
-{{ partial "single/homepage" . }}
-{{ else }}
-{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{ $paginator := .Paginate $pages  }}
-<div class="flex flex-col gap-1">
-<h3 class="text-2xl font-extrabold">Latest Posts</h3>
+{{ define "main" }} 
+
+<div class="py-2 flex flex-col gap-1">
+  <h3 class="title-small">{{ .Title }}</h3>
 </div>
-<section class="py-10 flex flex-col gap-10 ">
-{{ range $index, $pages := $paginator.Pages }}
-    {{ partial "list/default" . }}
-{{ end }}
-</section>
-{{ partial "list/components/pagination" . }}
-{{ end }}
+
+    <section>{{ .Content }} </section>
+
 {{ end }}

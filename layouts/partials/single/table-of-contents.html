@@ -1,0 +1,6 @@
+{{ if and .TableOfContents .Params.tableOfContents }}
+  <aside class="table-of-contents">
+    <h2 class="title-small">{{ i18n "summary" }}</h2>
+    {{ .TableOfContents }}
+  </aside>
+{{ end }}

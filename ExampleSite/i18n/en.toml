@@ -1,0 +1,17 @@
+[latestPosts]
+    other = 'Latest posts'
+    
+[readMore]
+    other = 'Read more'
+
+[summary]
+    other = 'Summary'
+
+[estimatedReadingTime]
+    other = 'Estimated reading time: %d minutes'
+
+[404_title]
+    other = 'Page not found'
+
+[404_text]
+    other = "Looks like you've followed a broken link or entered a URL that doesn't exist on this site."
