@@ -13,11 +13,11 @@
 
 <link rel="icon" type="image/x-icon" href="{{ $favicon.RelPermalink }}" />
 
-{{ if .Site.GoogleAnalytics}}
+{{ if .Site.Config.Services.GoogleAnalytics.ID }}
 <!-- Google Analytics -->
 <script
   defer
-  src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"
+  src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"
 ></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -26,7 +26,7 @@
   }
   gtag('js', new Date());
 
-  gtag('config', '{{ .Site.GoogleAnalytics }}');
+  gtag('config', '{{ .Site.Config.Services.GoogleAnalytics.ID }}');
 </script>
 <!-- End Google Analytics -->
 {{ end }}
