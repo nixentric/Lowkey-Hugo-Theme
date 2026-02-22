@@ -4,44 +4,40 @@
 </button>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const theme = localStorage.getItem('theme');
+  function getPreferredTheme() {
+    const saved = sessionStorage.getItem('theme');
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
 
-    if (!theme || theme === 'light') {
-      setTheme('light');
-    } else {
-      setTheme(theme);
-    }
-  });
-
-  function setTheme(theme) {
+  function applyTheme(theme) {
     const html = document.querySelector('html');
-    localStorage.setItem('theme', theme);
 
     if (theme === 'light') {
-      if (html.classList.contains('dark')) {
-        document.querySelector('html').classList.remove('dark');
-      }
-
+      html.classList.remove('dark');
       document.querySelector('.theme-icon.light').style.display = 'none';
       document.querySelector('.theme-icon.dark').style.display = 'block';
     } else {
-      if (!html.classList.contains('dark')) {
-        document.querySelector('html').classList.add('dark');
-      }
-
+      html.classList.add('dark');
       document.querySelector('.theme-icon.dark').style.display = 'none';
       document.querySelector('.theme-icon.light').style.display = 'block';
     }
   }
 
   function toggleTheme() {
-    const theme = localStorage.getItem('theme');
-
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    const current = document.querySelector('html').classList.contains('dark') ? 'dark' : 'light';
+    const next = current === 'light' ? 'dark' : 'light';
+    sessionStorage.setItem('theme', next);
+    applyTheme(next);
   }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    applyTheme(getPreferredTheme());
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    if (!sessionStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
 </script>
