@@ -83,4 +83,4 @@ Recent Hugo versions ignore `paginate` without a warning, so lists fall back to 
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE). The Inter font is © The Inter Project Authors and licensed under the [SIL Open Font License 1.1](static/fonts/Inter-LICENSE.txt).
