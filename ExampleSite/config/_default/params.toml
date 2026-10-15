@@ -1,5 +1,8 @@
 # Homepage Config
-isSinglePage = true
+# true: the home page shows only its own text. false: it also lists the latest posts.
+isSinglePage = false
+# true: the home page is the whole blog with its own pages. false: older posts continue on /posts/.
+homePagination = false
 
 # Meta Config
 description = "Hello"

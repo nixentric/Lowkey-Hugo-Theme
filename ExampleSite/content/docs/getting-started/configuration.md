@@ -51,6 +51,8 @@ summaryLength = 15
 ## Theme settings: `params.toml`
 
 ```toml
+isSinglePage = false
+homePagination = false
 description = "Notes on robots, research and the tools I use."
 avatar = "img/profile-picture.jpg"
 favicon = "icons/favicon.ico"
@@ -61,6 +63,8 @@ favicon = "icons/favicon.ico"
 
 | Setting       | Default                   | What it does |
 | ------------- | ------------------------- | ------------ |
+| `isSinglePage` | `false`                  | `false` lists your latest posts on the home page, under its intro text. `true` shows only the intro, for a landing page or portfolio. |
+| `homePagination` | `false`                | `false` shows one page of posts on the home page, and **Older posts** continues at `/posts/page/2/`. `true` turns the home page into the whole blog, with its own pages at `/page/2/`, `/page/3/` and so on. |
 | `description` | none                      | Meta description of the home page, shown by search engines under your site name. |
 | `avatar`      | `img/profile-picture.jpg` | Picture in the header. The path is relative to the `assets/` folder. The image is cropped to a square and shown as a circle. |
 | `favicon`     | `icons/favicon.ico`       | Browser tab icon. The path is relative to the `assets/` folder. |

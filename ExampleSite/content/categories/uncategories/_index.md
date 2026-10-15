@@ -2,4 +2,4 @@
 title: "Uncategories"
 draft: false
 ---
-Description
+Posts that do not fit anywhere else (yet).

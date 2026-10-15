@@ -40,10 +40,10 @@ Copy only the files you want to change, so the rest keeps getting updates.
 | The social links                      | `partials/footer/social.html` |
 | The home page                         | `index.html` |
 | A post or standalone page             | `_default/single.html` |
-| Post lists                            | `_default/list.html` |
+| Post lists, including one category or tag | `_default/list.html` |
 | One post in a list                    | `partials/list/default.html` |
 | The Newer / Older buttons             | `partials/list/pagination.html` |
-| The category and tag overview pages   | `_default/taxonomy.html` |
+| The category and tag overview pages   | `_default/terms.html` |
 | Documentation pages                   | `docs/all.html` |
 | The documentation sidebar             | `partials/docs/sidebar.html`, `partials/docs/tree.html` |
 | How dates are written                 | `partials/utils/date.html` |

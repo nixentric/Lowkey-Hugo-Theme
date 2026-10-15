@@ -5,34 +5,40 @@
     weight = 1
 
 [[main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+[[main]]
     identifier = "about"
     name = "About me"
     url = "/about/"
-    weight = 2
+    weight = 3
 
 [[main]]
     identifier = "docs"
     name = "Docs"
     url = "/docs/"
-    weight = 3
+    weight = 4
 
 [[main]]
     identifier = "categories"
     name = "Categories"
     url = "/categories"
-    weight = 4
+    weight = 5
 
 [[main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags"
-    weight = 5
+    weight = 6
 
 [[main]]
     identifier = "donate"
     name = "Donate"
     url = "https://ko-fi.com/nixentric"
-    weight = 6
+    weight = 7
     
 # Social Media Configuration
 

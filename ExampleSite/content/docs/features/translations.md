@@ -48,6 +48,7 @@ Consider sending your file as a pull request to the [theme repository](https://g
 
 | Key                    | English |
 | ---------------------- | ------- |
+| `latestPosts`          | Latest posts (heading above the posts on the home page) |
 | `readMore`             | Read more |
 | `summary`              | Summary (title of the table of contents) |
 | `estimatedReadingTime` | Estimated reading time: %d minutes (`%d` becomes the number) |

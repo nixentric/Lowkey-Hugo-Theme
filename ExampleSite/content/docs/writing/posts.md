@@ -86,7 +86,7 @@ See what I've written lately.
 
 ## The home page
 
-The home page shows the title and text of `content/_index.md`. It is the place for a short introduction:
+The home page shows the title and text of `content/_index.md`, followed by your latest posts. The text is the place for a short introduction:
 
 ```markdown
 ---
@@ -94,6 +94,14 @@ title: "Ahoy There!"
 ---
 I write about robots, research and the tools I use every day.
 ```
+
+Posts are taken from `content/posts/`. Two settings in `params.toml` change what happens below the introduction:
+
+| Setting                 | Home page shows |
+| ----------------------- | --------------- |
+| Neither (default)       | The newest posts, as many as `pagerSize`. **Older posts** continues on the second page of `/posts/`. |
+| `homePagination = true` | The whole blog, with its own **Newer posts** and **Older posts** buttons. |
+| `isSinglePage = true`   | Only the introduction. Link to `/posts/` from the [main menu]({{< relref "/docs/getting-started/menus" >}}) instead. |
 
 ## Standalone pages
 

@@ -1,9 +1,47 @@
-{{ define "main" }} 
+{{ define "main" }}
 
 <div class="py-2 flex flex-col gap-1">
   <h3 class="title-small">{{ .Title }}</h3>
 </div>
 
     <section>{{ .Content }} </section>
+
+{{/*
+  params.isSinglePage   → only the text above.
+  params.homePagination → the home page is the whole blog, with its own pages (/page/2/).
+  Otherwise             → the first page of /posts/, and "Older Posts" continues at /posts/page/2/.
+*/}}
+{{ if not site.Params.isSinglePage }}
+  {{ $paginator := false }}
+  {{ if site.Params.homePagination }}
+    {{ $paginator = .Paginate (where site.RegularPages "Section" "posts") }}
+  {{ else }}
+    {{ with site.GetPage "/posts" }}{{ $paginator = .Paginator }}{{ end }}
+  {{ end }}
+
+  {{ with $paginator }}
+    <section class="pt-5 flex flex-col gap-10">
+      <h3 class="title-small mb-0">{{ i18n "latestPosts" }}</h3>
+      {{ range .Pages }}
+        {{ partial "list/default" . }}
+      {{ end }}
+    </section>
+
+    {{ if site.Params.homePagination }}
+      {{ if gt .TotalPages 1 }}
+        {{ partial "list/pagination" $ }}
+      {{ end }}
+    {{ else }}
+      {{ with .Next }}
+        <div class="py-10 flex justify-end font-semibold">
+          <a href="{{ .URL }}" class="pagination-button">
+            {{ i18n "olderPosts" }}
+            <span class="h-4 w-4 stroke-2"> {{ partial "utils/icon" "arrow-right" }} </span>
+          </a>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
 {{ end }}
