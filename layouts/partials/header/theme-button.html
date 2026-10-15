@@ -1,43 +1,18 @@
 <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
-  <span class="theme-icon light"> {{ partial "utils/icon" "sun" }} </span>
-  <span class="theme-icon dark"> {{ partial "utils/icon" "moon" }} </span>
+  <span class="theme-icon hidden dark:block"> {{ partial "utils/icon" "sun" }} </span>
+  <span class="theme-icon dark:hidden"> {{ partial "utils/icon" "moon" }} </span>
 </button>
 
 <script>
-  function getPreferredTheme() {
-    const saved = sessionStorage.getItem('theme');
-    if (saved) return saved;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  function applyTheme(theme) {
-    const html = document.querySelector('html');
-
-    if (theme === 'light') {
-      html.classList.remove('dark');
-      document.querySelector('.theme-icon.light').style.display = 'none';
-      document.querySelector('.theme-icon.dark').style.display = 'block';
-    } else {
-      html.classList.add('dark');
-      document.querySelector('.theme-icon.dark').style.display = 'none';
-      document.querySelector('.theme-icon.light').style.display = 'block';
-    }
-  }
-
+  {{/* Initial theme is applied in head/meta.html to avoid a flash of the wrong theme. */}}
   function toggleTheme() {
-    const current = document.querySelector('html').classList.contains('dark') ? 'dark' : 'light';
-    const next = current === 'light' ? 'dark' : 'light';
-    sessionStorage.setItem('theme', next);
-    applyTheme(next);
+    const dark = document.documentElement.classList.toggle('dark');
+    sessionStorage.setItem('theme', dark ? 'dark' : 'light');
   }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    applyTheme(getPreferredTheme());
-  });
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
     if (!sessionStorage.getItem('theme')) {
-      applyTheme(e.matches ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', e.matches);
     }
   });
 </script>

@@ -5,15 +5,15 @@
     <h2 class="title-large">{{ .Title }}</h2>
 
     <div class="meta">
-      {{/* Publish date */}}
-      <time datetime="{{ .PublishDate }}" title='{{ .PublishDate.Format "Mon, Jan 2, 2006, 3:04 PM MST" }}'>
-        {{ .PublishDate.Format "02/01/2006" }} - {{ printf (i18n "estimatedReadingTime") .ReadingTime }}
-      </time>
+      {{/* Publish date, skipped for undated pages such as About */}}
+      {{ if not .PublishDate.IsZero }}
+      <span>{{ partial "utils/date" .PublishDate }}{{ with i18n "estimatedReadingTime" }} - {{ printf . $.ReadingTime }}{{ end }}</span>
+      {{ end }}
 
       {{/* Categories */}} 
       {{ with (.GetTerms "categories") }} — 
         {{ range . }}
-          <a class="categories" href="{{ .RelPermalink }}" alt="{{ .LinkTitle }}">
+          <a class="categories" href="{{ .RelPermalink }}">
             {{ .LinkTitle }}
           </a>
         {{ end }} 
@@ -31,7 +31,7 @@
     {{ with (.GetTerms "tags") }}
       <div class="pb-14 taxonomy-list tags-list">
       {{ range . }}
-        <a href="{{ .RelPermalink }}" alt="{{ .LinkTitle }}">
+        <a href="{{ .RelPermalink }}">
           {{ .LinkTitle }}
         </a>
       {{ end }}

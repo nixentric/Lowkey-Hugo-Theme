@@ -5,7 +5,7 @@
   {{ if $title }}
     <h3 class="alert-title">{{ $title }}</h3>
   {{ end }}
-  <p class="flex flex-row items-center gap-2">
+  <div class="flex flex-row items-start gap-2">
     {{ if eq $severity "info" }}
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +68,6 @@
     </svg>
 
     {{ end }}
-    {{.Inner}}
-  </p>
+    <div>{{ .Inner }}</div>
+  </div>
 </div>

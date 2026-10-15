@@ -1,0 +1,11 @@
+{{/* Pages and sub-sections of .section, sorted by weight. Sub-sections recurse. */}}
+<ul>
+  {{ range .section.Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="{{ if .IsSection }}docs-sidebar-group{{ end }}{{ if eq . $.current }} active{{ end }}">{{ .LinkTitle }}</a>
+      {{ if .IsSection }}
+        {{ partial "docs/tree" (dict "section" . "current" $.current) }}
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

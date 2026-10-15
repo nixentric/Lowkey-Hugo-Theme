@@ -1,0 +1,4 @@
+{{- /* Localized absolute date; baseof.html turns recent ones into "3 days ago" in the browser. */ -}}
+<time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}" title="{{ time.Format ":date_full" . }}, {{ time.Format ":time_short" . }}">
+  {{- time.Format ":date_long" . -}}
+</time>

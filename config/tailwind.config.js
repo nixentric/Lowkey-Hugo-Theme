@@ -1,19 +1,18 @@
 const path = require('path');
 
-// When deploying to production, set the base directory to your Hugo project's root directory.
-const baseDir = path.join(__dirname, '..');
+const themeDir = path.join(__dirname, '..');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
   content: [
-    `${baseDir}/themes/**/layouts/**/*.html`,
-    `${baseDir}/content/**/layouts/**/*.html`,
-    `${baseDir}/layouts/**/*.html`,
-    `${baseDir}/content/**/*.html`,
-    `${baseDir}/content/**/*.md`,
-    `${baseDir}/public/**/*.html`,
+    `${themeDir}/layouts/**/*.html`,
+    // Site overrides and content. Hugo runs PostCSS from the site root.
+    './layouts/**/*.html',
+    './content/**/*.{html,md}',
   ],
+  // Classes added by Hugo's Markdown renderer or MathJax, never written in templates.
+  safelist: ['footnotes', 'MathJax_Display'],
   theme: {
     extend: {
       fontFamily: {
@@ -22,6 +21,5 @@ module.exports = {
     },
   },
   plugins: [],
-  variants: ['group-hover'],
 }
 

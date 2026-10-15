@@ -1,14 +1,9 @@
-{{ $avatar := resources.GetMatch .Site.Params.avatar }} 
-{{ $tiny := ($avatar.Fill "80x80 q90") }}
+{{ with resources.GetMatch (site.Params.avatar | default "img/profile-picture.jpg") }}
+{{ $tiny := .Fill "160x160 q90" }}
 
 <div class="flex-none w-20 h-20 rounded-full overflow-hidden">
-  <a href="{{ .Site.BaseURL }}">
-    <img
-      srcset="{{- with $tiny.RelPermalink -}}{{.}} 80w{{- end -}}"
-      src="{{ $avatar.RelPermalink }}"
-      width="{{ $avatar.Width }}"
-      height="{{ $avatar.Height }}"
-      alt="{{ .Site.Title }}"
-    />
+  <a href="{{ site.BaseURL }}">
+    <img src="{{ $tiny.RelPermalink }}" width="80" height="80" alt="{{ site.Title }}" />
   </a>
 </div>
+{{ end }}

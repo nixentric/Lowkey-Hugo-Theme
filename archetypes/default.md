@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name '-' ' ' | title }}"
+title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 draft: true # Set 'false' to publish
 description: ''
@@ -8,7 +8,3 @@ categories:
 tags:
   -
 ---
-
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true

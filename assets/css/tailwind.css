@@ -103,7 +103,7 @@
   }
 
   body {
-    @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-lg text-justify;
+    @apply bg-white dark:bg-black text-gray-700 dark:text-gray-300 text-lg;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -135,11 +135,11 @@
   }
   
   hr {
-    @apply border-gray-200 dark:border-gray-700;
+    @apply border-gray-200 dark:border-gray-800;
   }
 
   p, hr, pre, dl {
-    @apply mb-5 text-justify;
+    @apply mb-5;
   }
   
   article > h1 {
@@ -147,11 +147,11 @@
   }
   
   code {
-    @apply bg-gray-100 dark:bg-gray-800 rounded-lg text-sm border dark:border-gray-700 px-2 py-1;
+    @apply bg-gray-100 dark:bg-gray-900 rounded-lg text-sm border dark:border-gray-800 px-2 py-1;
   }
   
   pre {
-    @apply rounded-lg border dark:border-gray-700 p-5 overflow-auto text-base;
+    @apply rounded-lg border dark:border-gray-800 p-5 overflow-auto text-base;
   }
   
   pre code {
@@ -167,7 +167,7 @@
   }
   
   blockquote {
-    @apply text-xl text-gray-500 dark:text-gray-400 italic border-l-4 border-gray-300 dark:border-gray-700 pl-4 mb-5;
+    @apply text-xl text-gray-500 dark:text-gray-400 italic border-l-4 border-gray-300 dark:border-gray-800 pl-4 mb-5;
   }
   
   ul, ol {
@@ -191,15 +191,15 @@
   }
   
   table {
-    @apply w-full border rounded-md border-separate border-spacing-0 mb-5;
+    @apply w-full border dark:border-gray-800 rounded-md border-separate border-spacing-0 mb-5;
   }
   
   thead th {
-    @apply border-b-2 border-r last:border-r-0 py-2 px-3;
+    @apply border-b-2 border-r last:border-r-0 dark:border-gray-800 py-2 px-3;
   }
   
   tbody td {
-    @apply py-2 px-3 border-b text-base border-r last:border-r-0;
+    @apply py-2 px-3 border-b text-base border-r last:border-r-0 dark:border-gray-800;
   }
   
   tbody tr:last-child td {
@@ -234,7 +234,8 @@
   
   /* Content overrides */
   #content {
-    @apply leading-normal;
+    /* Long words, URLs and inline code wrap instead of causing horizontal scroll on mobile */
+    @apply leading-normal break-words;
   }
 
   #content a {
@@ -267,10 +268,12 @@
   
   #content .footnotes {
     @apply text-sm;
+    /* Footnote paragraphs are inline-block, so break-words is not enough for long URLs */
+    overflow-wrap: anywhere;
   }
   
   #content .footnotes p {
-    @apply inline-block mb-0;
+    @apply inline-block align-top mb-0;
   }
   
   #content .footnotes ol {
@@ -282,11 +285,15 @@
   }
   
   #content .alert-box {
-    @apply px-4 pt-4 pb-1 mb-5 border-t-4;
+    @apply p-4 mb-5 border-t-4;
   }
   
   #content .alert-box .alert-title {
     @apply text-inherit font-semibold text-lg py-0 px-0 mb-2;
+  }
+
+  #content .alert-box code {
+    @apply bg-white/60 border-0 dark:bg-black/40;
   }
 
   #content .alert-box a {
@@ -294,27 +301,27 @@
   }
 
   #content .alert-box .alert-icon {
-    @apply w-7 h-7 mr-2;
+    @apply w-7 h-7 mr-2 shrink-0;
   }
 
   #content .alert-box.warning {
-    @apply bg-yellow-100 border-yellow-500 text-yellow-900;
+    @apply bg-yellow-100 border-yellow-500 text-yellow-900 dark:bg-yellow-950 dark:text-yellow-100;
   }
   
   #content .alert-box.info {
-    @apply bg-blue-100 border-blue-500 text-blue-900;
+    @apply bg-blue-100 border-blue-500 text-blue-900 dark:bg-blue-950 dark:text-blue-100;
   }
 
   #content .alert-box.success {
-    @apply bg-green-100 border-green-500 text-green-900;
+    @apply bg-green-100 border-green-500 text-green-900 dark:bg-green-950 dark:text-green-100;
   }
 
   #content .alert-box.error {
-    @apply bg-red-100 border-red-500 text-red-900;
+    @apply bg-red-100 border-red-500 text-red-900 dark:bg-red-950 dark:text-red-100;
   }
 
   #content .table-of-contents {
-    @apply bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 p-4 border dark:border-gray-700 rounded-lg;
+    @apply bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 p-4 border dark:border-gray-800 rounded-lg;
   }
 
   #content .table-of-contents #TableOfContents ul {
@@ -330,7 +337,7 @@
   }
 
   #content .pagination-button {
-    @apply no-underline inline-flex items-center gap-2 px-3 py-2 border border-gray-300 dark:border-gray-700 text-sm rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100;
+    @apply no-underline inline-flex items-center gap-2 px-3 py-2 border border-gray-300 dark:border-gray-800 text-sm rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-black hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-gray-900 dark:hover:text-gray-100;
   }
 
   #content .taxonomy-list {
@@ -338,7 +345,7 @@
   }
 
   #content .taxonomy-list a {
-    @apply font-normal no-underline text-base text-gray-800 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 py-2 px-3 rounded-lg;
+    @apply font-normal no-underline text-base text-gray-800 dark:text-gray-400 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 py-2 px-3 rounded-lg;
   }
 
   #content .tags-list {
@@ -347,6 +354,58 @@
 
   #content span.task-list + ul {
     @apply list-none;
+  }
+
+  /* Documentation */
+  #content .docs-menu {
+    @apply mb-10 px-4 py-3 border rounded-lg dark:border-gray-800;
+  }
+
+  #content .docs-menu summary {
+    @apply flex items-center justify-between cursor-pointer list-none text-sm font-semibold uppercase text-gray-500 dark:text-gray-400;
+  }
+
+  /* Safari still draws its own disclosure triangle without this */
+  #content .docs-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #content .docs-menu .docs-menu-icon {
+    @apply w-4 h-4 transition-transform;
+  }
+
+  #content .docs-menu[open] summary {
+    @apply mb-3;
+  }
+
+  #content .docs-menu[open] .docs-menu-icon {
+    @apply rotate-180;
+  }
+
+  #content .docs-sidebar ul {
+    @apply list-none ml-0 mb-0;
+  }
+
+  #content .docs-sidebar ul ul {
+    @apply ml-1 mb-3 pl-3 border-l border-gray-200 dark:border-gray-800;
+  }
+
+  #content .docs-sidebar a {
+    @apply block py-1 text-base font-normal no-underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100;
+  }
+
+  #content .docs-sidebar a.docs-sidebar-title,
+  #content .docs-sidebar a.docs-sidebar-group {
+    @apply mt-2 font-semibold text-gray-900 dark:text-gray-200;
+  }
+
+  #content .docs-sidebar a.active {
+    @apply font-semibold text-emerald-700 dark:text-emerald-300;
+  }
+
+  /* Wide equations scroll inside their box instead of widening the page on mobile */
+  #content .MathJax_Display {
+    @apply overflow-x-auto overflow-y-hidden;
   }
 
   /* Misc */

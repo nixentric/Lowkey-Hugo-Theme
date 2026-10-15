@@ -1,0 +1,30 @@
+{{ define "bodyClass" }}max-w-screen-lg{{ end }}
+
+{{ define "main" }}
+
+<div class="docs lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-12">
+  <details class="docs-menu lg:hidden">
+    <summary>
+      {{ i18n "docsMenu" }}
+      <span class="docs-menu-icon">{{ partial "utils/icon" "chevron-down" }}</span>
+    </summary>
+    {{ partial "docs/sidebar" . }}
+  </details>
+
+  <aside class="hidden lg:block lg:sticky lg:top-6 lg:self-start lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto">
+    {{ partial "docs/sidebar" . }}
+  </aside>
+
+  <article class="flex flex-col gap-10 min-w-0">
+    <header class="flex flex-col gap-2">
+      <h2 class="title-large">{{ .Title }}</h2>
+      {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+    </header>
+
+    {{ partial "single/table-of-contents" . }}
+
+    <section>{{ .Content | emojify }}</section>
+  </article>
+</div>
+
+{{ end }}

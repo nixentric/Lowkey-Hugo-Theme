@@ -6,7 +6,7 @@
     {{ if $paginator.HasPrev }}
       <a href="{{ $paginator.Prev.URL }}" class="pagination-button">
         <span class="h-4 w-4 stroke-2"> {{ partial "utils/icon" "arrow-left" }} </span>
-        Newer Posts
+        {{ i18n "newerPosts" }}
       </a>
     {{ end }}
   </div>
@@ -15,7 +15,7 @@
   <div class="flex justify-end">
     {{ if $paginator.HasNext }}
       <a href="{{ $paginator.Next.URL }}" class="pagination-button">
-        Older Posts
+        {{ i18n "olderPosts" }}
         <span class="h-4 w-4 stroke-2"> {{ partial "utils/icon" "arrow-right" }} </span>
       </a>
     {{ end }}

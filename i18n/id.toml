@@ -1,0 +1,26 @@
+[latestPosts]
+    other = 'Tulisan terbaru'
+
+[readMore]
+    other = 'Baca selengkapnya'
+
+[summary]
+    other = 'Daftar isi'
+
+[estimatedReadingTime]
+    other = 'Perkiraan waktu baca: %d menit'
+
+[404_title]
+    other = 'Halaman tidak ditemukan'
+
+[404_text]
+    other = 'Sepertinya kamu membuka tautan yang rusak atau URL yang tidak ada di situs ini.'
+
+[newerPosts]
+    other = 'Tulisan lebih baru'
+
+[olderPosts]
+    other = 'Tulisan lebih lama'
+
+[docsMenu]
+    other = 'Menu dokumentasi'

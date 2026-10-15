@@ -10,9 +10,6 @@ avatar = "img/profile-picture.jpg"
 #favicon
 favicon = "icons/favicon.ico"
 
-# disqus is a comment system. see https://disqus.com
-disqusShortname = ""
-
 [emoji]
 enableEmoji = true
 

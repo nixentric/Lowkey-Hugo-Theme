@@ -1,13 +1,18 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://lowkey.nixentric.com/' # Change to your own domain
 copyright = "{year}" # To make 2007 - 2022. Just add before {year} example: 2007 - {year}
-languageCode = 'en-US'
+locale = 'en-US'
 defaultContentLanguage = 'en'
 theme = 'enchanted-lowkey'
-title = 'Enhanced Lowkey Hugo'
+title = 'Lowkey Hugo'
 enableRobotsTXT = true
 summaryLength = 15
-paginate = 5
 
+[pagination]
+  pagerSize = 5
+
+# disqus is a comment system. see https://disqus.com
+[services.disqus]
+  shortname = ''
 
 [markup]
   [markup.highlight]

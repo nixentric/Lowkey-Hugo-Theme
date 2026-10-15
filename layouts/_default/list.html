@@ -18,7 +18,7 @@
 </div>
 
 <section class="flex flex-col gap-10">
-  {{ range $index, $pages := $paginator.Pages }}
+  {{ range $paginator.Pages }}
     {{ partial "list/default" . }}
   {{ end }}
 </section>

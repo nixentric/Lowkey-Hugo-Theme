@@ -5,7 +5,7 @@
   {{ end }}
 
     <!-- disqus -->
-  {{ if .Site.Params.disqusShortname }}
+  {{ if site.Config.Services.Disqus.Shortname }}
     {{ partial "single/comments/disqus" . }}
   {{ end }}
 {{ end }}

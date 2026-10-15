@@ -1,21 +1,9 @@
 const themeDir = __dirname + "/../";
 
-const cssnanoPlugin = require("cssnano")({
-  path: [themeDir],
-  preset: [
-    "default",
-    {
-      discardComments: {
-        removeAll: true,
-      },
-    },
-  ],
-});
-
+// Minification is done by Hugo's `minify` in head/styles.html.
 module.exports = {
   plugins: [
     require("tailwindcss")(themeDir + "./config/tailwind.config.js"),
-    require("autoprefixer")({ path: [themeDir] }),
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [cssnanoPlugin] : []),
+    require("autoprefixer"),
   ],
 };

@@ -1,0 +1,7 @@
+{{ $current := . }}
+{{ with .FirstSection }}
+<nav class="docs-sidebar" aria-label="{{ i18n "docsMenu" }}">
+  <a href="{{ .RelPermalink }}" class="docs-sidebar-title{{ if eq . $current }} active{{ end }}">{{ .LinkTitle }}</a>
+  {{ partial "docs/tree" (dict "section" . "current" $current) }}
+</nav>
+{{ end }}

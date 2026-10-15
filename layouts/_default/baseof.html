@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default `en` }}" class="scroll-smooth dark">
+<html lang="{{ site.Language.Locale | default `en` }}" class="scroll-smooth dark">
   <head>
     {{- partial "head/index" . -}}
   </head>
 
-  <body class="max-w-screen-md mx-auto px-2.5">
+  <body class="{{ block "bodyClass" . }}max-w-screen-md{{ end }} mx-auto px-5">
     <div class="header">
       {{ partial "header/index" . }}
       {{ partial "header/theme-button" . }}
@@ -16,5 +16,20 @@
     </main>
 
     {{- partial "footer/index" . -}}
+
+    <script>
+      // Dates younger than two months read as "yesterday", "3 days ago", "last month".
+      // Done in the browser because a date computed at build time would go stale.
+      (function () {
+        const rtf = new Intl.RelativeTimeFormat(document.documentElement.lang, { numeric: 'auto' });
+        const units = [['month', 2592000], ['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60], ['second', 1]];
+        document.querySelectorAll('time[datetime]').forEach(function (el) {
+          const seconds = (new Date(el.getAttribute('datetime')) - Date.now()) / 1000;
+          if (Math.abs(seconds) >= 2 * 2592000) return;
+          const [unit, size] = units.find(function (u) { return Math.abs(seconds) >= u[1]; }) || units[5];
+          el.textContent = rtf.format(Math.trunc(seconds / size), unit);
+        });
+      })();
+    </script>
   </body>
 </html>

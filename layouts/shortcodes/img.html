@@ -1,4 +1,7 @@
-{{ $img := .Page.Resources.GetMatch (printf "%s" (.Get "src" | safeURL )) }}
+{{ $img := .Page.Resources.GetMatch (.Get "src") }}
+{{ if not $img }}
+  {{ errorf "img shortcode: %q not found in page bundle. %s" (.Get "src") .Position }}
+{{ end }}
 {{ $alt := .Get "alt" }}
 {{ $caption := .Get "caption" }}
 {{ $captionPosition := .Get "caption-position" }}

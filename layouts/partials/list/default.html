@@ -3,11 +3,7 @@
     <a href="{{ .Permalink }}">{{ .Title }}</a>
   </h1>
   
-  <span class="date">
-    <time datetime="{{ .PublishDate }}" title='{{ .PublishDate.Format "Mon, Jan 2, 2006, 3:04 PM MST" }}'>
-      {{ .PublishDate.Format "02/01/2006" }}
-    </time>
-  </span>
+  <span class="date">{{ partial "utils/date" .PublishDate }}</span>
 
   <div class="description">
     {{ if .Params.description }}

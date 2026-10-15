@@ -6,15 +6,17 @@ license = "MIT"
 licenselink = "https://github.com/nixentric/Lowkey-Hugo-Theme/blob/main/LICENSE"
 description = "Lowkey Hugo theme is a simple and modern theme that is inspired by Adam Wathan's Blog."
 homepage = "https://github.com/nixentric/Lowkey-Hugo-Theme"
-demosite = "https://lowkey-demo.pages.dev"
-tags = ["simple", "minimal", "responsive", "blog", "personal", "light"]
+demosite = "https://lowkey.nixentric.com"
+tags = ["simple", "minimal", "responsive", "blog", "personal", "light", "dark", "documentation"]
 features = [
   "responsive",
   "single-column",
   "blog",
   "tailwindcss",
+  "dark mode",
+  "documentation",
 ]
-min_version = "0.110.0"
+min_version = "0.158.0"
 
 [author]
   name = "Nixentric"
