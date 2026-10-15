@@ -75,14 +75,7 @@ Recent Hugo versions ignore `paginate` without a warning, so lists fall back to 
 - [Hugo](https://gohugo.io/)
 - [Tailwind CSS](https://tailwindcss.com/) v3 with PostCSS, through Hugo Pipes
 
-## Special Contributors
-
-First, I am very grateful to the first Contributor who has made a significant contribution to this project.
-
-Special Mention:
-- 🥇 [@diegopaiva1](https://github.com/diegopaiva1) - [entusiasta.dev](https://entusiasta.dev)
-
-And also to the other contributors 💌:
+## Contributors
 
 <a href="https://github.com/nixentric/Lowkey-Hugo-Theme/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=nixentric/Lowkey-Hugo-Theme" />
