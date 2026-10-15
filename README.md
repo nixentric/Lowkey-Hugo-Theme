@@ -39,9 +39,9 @@ Create a site, add the theme and copy the example site into it:
 hugo new project my-blog
 cd my-blog
 git init
-git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/enchanted-lowkey
+git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/lowkey
 rm hugo.toml
-cp -R themes/enchanted-lowkey/ExampleSite/. .
+cp -R themes/lowkey/ExampleSite/. .
 npm install
 hugo server
 ```
@@ -65,6 +65,8 @@ The theme now requires Hugo v0.158.0 or newer. Rename these settings in your sit
 | `languageCode = 'en-US'`           | `locale = 'en-US'`                      |
 | `paginate = 5`                     | `[pagination]` → `pagerSize = 5`        |
 | `disqusShortname` in `params.toml` | `[services.disqus]` → `shortname = '…'` |
+
+Older guides installed the theme in `themes/enchanted-lowkey`. That folder keeps working as long as your config says `theme = 'enchanted-lowkey'`; the setting must match the folder name, so keep it if you copy the new example config.
 
 Recent Hugo versions ignore `paginate` without a warning, so lists fall back to 10 posts per page until it is renamed. The `type: taxonomies` and `layout: "home"` lines in `content/categories/_index.md` and `content/tags/_index.md` are no longer needed.
 

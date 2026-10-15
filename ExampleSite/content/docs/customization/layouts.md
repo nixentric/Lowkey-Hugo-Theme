@@ -7,13 +7,13 @@ tableOfContents: true
 
 ## How overriding works
 
-Copy a template from `themes/enchanted-lowkey/layouts/` to the same path in your site's `layouts/` folder, then edit your copy. Hugo uses your file and ignores the theme's.
+Copy a template from `themes/lowkey/layouts/` to the same path in your site's `layouts/` folder, then edit your copy. Hugo uses your file and ignores the theme's.
 
 For example, to add a line to the footer:
 
 ```bash
 mkdir -p layouts/partials/footer
-cp themes/enchanted-lowkey/layouts/partials/footer/copyright.html layouts/partials/footer/
+cp themes/lowkey/layouts/partials/footer/copyright.html layouts/partials/footer/
 ```
 
 ```go-html-template

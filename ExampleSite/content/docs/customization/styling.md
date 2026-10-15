@@ -23,7 +23,7 @@ Copy the theme's stylesheet into your site:
 
 ```bash
 mkdir -p assets/css
-cp themes/enchanted-lowkey/assets/css/tailwind.css assets/css/tailwind.css
+cp themes/lowkey/assets/css/tailwind.css assets/css/tailwind.css
 ```
 
 Your copy now replaces the theme's. Edit it freely; `hugo server` reloads the page when you save.

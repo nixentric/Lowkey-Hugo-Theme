@@ -38,7 +38,7 @@ Create a file with the same name in your site's own `i18n/` folder and add only 
 
 ## Adding a language
 
-1. Copy `themes/enchanted-lowkey/i18n/en.toml` to `i18n/<code>.toml` in your site, for example `i18n/de.toml`.
+1. Copy `themes/lowkey/i18n/en.toml` to `i18n/<code>.toml` in your site, for example `i18n/de.toml`.
 2. Translate every value. A missing text is shown as nothing at all, so do not skip any.
 3. Set `defaultContentLanguage` and `locale` as shown above.
 

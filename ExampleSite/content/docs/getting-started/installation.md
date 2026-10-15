@@ -31,16 +31,16 @@ git init
 
 ## Add the theme
 
-Add Lowkey as a Git submodule in `themes/enchanted-lowkey`:
+Add Lowkey as a Git submodule in `themes/lowkey`:
 
 ```bash
-git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/enchanted-lowkey
+git submodule add https://github.com/nixentric/Lowkey-Hugo-Theme.git themes/lowkey
 ```
 
 If you use SSH with GitHub, the URL `git@github.com:nixentric/Lowkey-Hugo-Theme.git` works too.
 
 {{< alert warning "Keep the folder name" >}}
-The example configuration says <code>theme = 'enchanted-lowkey'</code>. If you clone the theme into a different folder, change that line to match.
+The example configuration says <code>theme = 'lowkey'</code>. If you clone the theme into a different folder, change that line to match.
 {{< /alert >}}
 
 ## Copy the example site
@@ -49,7 +49,7 @@ The example site holds a ready-made configuration and sample content. Remove the
 
 ```bash
 rm hugo.toml
-cp -R themes/enchanted-lowkey/ExampleSite/. .
+cp -R themes/lowkey/ExampleSite/. .
 ```
 
 You now have:
@@ -107,6 +107,8 @@ Lowkey now requires Hugo v0.158.0 or newer. If your site was set up before that,
 | `disqusShortname` in `params.toml`  | `[services.disqus]` → `shortname = '…'`  |
 
 The old `paginate` key is ignored by recent Hugo versions without any warning, so lists silently fall back to 10 posts per page until you rename it.
+
+Older guides installed the theme in `themes/enchanted-lowkey`. That folder keeps working as long as your config says `theme = 'enchanted-lowkey'`; the setting must match the folder name, so keep it if you copy the new example config.
 
 You can also remove `type: taxonomies` and `layout: "home"` from `content/categories/_index.md` and `content/tags/_index.md`. They are no longer needed, but they do no harm if you keep them.
 
