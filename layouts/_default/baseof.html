@@ -31,5 +31,8 @@
         });
       })();
     </script>
+
+    {{- /* Only pages with a mermaid code block load the script; the render hook sets this flag. */}}
+    {{- if .Store.Get "hasMermaid" }}{{ partial "single/mermaid" . }}{{ end }}
   </body>
 </html>

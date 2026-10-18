@@ -1,0 +1,20 @@
+<script type="module">
+  // Diagrams are redrawn from their source whenever the light/dark theme changes.
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.17.2/dist/mermaid.esm.min.mjs';
+  const diagrams = document.querySelectorAll('pre.mermaid');
+  diagrams.forEach(function (el) { el.dataset.source = el.textContent; });
+  let wasDark;
+  function render() {
+    const dark = document.documentElement.classList.contains('dark');
+    if (dark === wasDark) return;
+    wasDark = dark;
+    mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'default' });
+    diagrams.forEach(function (el) {
+      el.removeAttribute('data-processed');
+      el.textContent = el.dataset.source;
+    });
+    mermaid.run({ nodes: diagrams });
+  }
+  render();
+  new MutationObserver(render).observe(document.documentElement, { attributeFilter: ['class'] });
+</script>

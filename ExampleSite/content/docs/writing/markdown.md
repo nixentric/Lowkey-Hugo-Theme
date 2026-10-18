@@ -1,6 +1,6 @@
 ---
 title: "Markdown & code"
-description: "Code highlighting, tables, footnotes, math, emoji and the table of contents."
+description: "Code highlighting, tables, footnotes, math, diagrams, emoji and the table of contents."
 weight: 2
 tableOfContents: true
 ---
@@ -92,6 +92,30 @@ $$
 $$
 
 A formula wider than the screen scrolls sideways inside its own box.
+
+## Diagrams
+
+Name a code block `mermaid` and [Mermaid](https://mermaid.js.org/) draws it as a diagram in the browser. The Mermaid script loads only on pages that have a diagram, and diagrams switch colors with the light and dark theme.
+
+````markdown
+```mermaid
+flowchart LR
+    A[Write Markdown] --> B(Hugo builds)
+    B --> C{Has a diagram?}
+    C -->|Yes| D[Load Mermaid]
+    C -->|No| E[Skip it]
+```
+````
+
+```mermaid
+flowchart LR
+    A[Write Markdown] --> B(Hugo builds)
+    B --> C{Has a diagram?}
+    C -->|Yes| D[Load Mermaid]
+    C -->|No| E[Skip it]
+```
+
+The [Mermaid docs](https://mermaid.js.org/intro/) list every diagram type: flowcharts, sequence diagrams, Gantt charts and more.
 
 ## Emoji
 

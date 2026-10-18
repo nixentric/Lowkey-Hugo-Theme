@@ -16,7 +16,7 @@
 - Friendly dates: "3 days ago" for new posts, a localized date such as "August 3, 2026" for older ones
 - Documentation pages with a sidebar generated from your folders
 - Shortcodes for alerts, captioned images and task lists
-- Syntax highlighting, tables, footnotes, math (MathJax) and emoji
+- Syntax highlighting, tables, footnotes, math (MathJax), diagrams (Mermaid) and emoji
 - Table of contents per post
 - Categories and tags with post counts
 - Comments with [giscus](https://giscus.app) or Disqus
